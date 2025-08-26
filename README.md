@@ -16,8 +16,13 @@ ElecMeter is an index for measuring voter dissatisfaction in single-winner elect
 The ElecMeter Index combines the average voter dissatisfaction score with the most extreme divergence-based index through a generalized mean formulation (for details, see ElecMeter: An Index for Evaluating Electoral Social Dissatisfaction). This approach captures both the magnitude and the structural pattern of dissatisfaction within the electorate.
 Below, you can see the dissatisfaction index computed by ElecMeter for two populations corresponding to the distributions shown in the figure above.
 
-# An Example of Calculating the Dissaisfaction of the results of voting using ElecMeter Index:
-Suppose there is population with size 10000. The vo
+### An Example of Calculating the Dissaisfaction of the results of voting using ElecMeter Index:
+Suppose there are two populations, each with a size of 10,000. In each population, an election is held separately to select a winner among five candidates. After the winner is chosen, the voters’ dissatisfaction distributions can be represented as follows:
+Population A: (3197, 1247, 3773, 646, 1137)
+Population B: (3728, 3268, 0, 8, 2996)
+The dissatisfaction index for these two populations is then calculated using the function ElecMeter_function().
+
+
 
 
 ## Dissatisfaction Distribution Simulation
