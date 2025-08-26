@@ -10,9 +10,13 @@
 <p align="justify">
 ElecMeter is an index for measuring voter dissatisfaction in single-winner elections. The core idea is to assign each voter a dissatisfaction score based on the rank position of the winning candidate (see Figure, part A). These individual scores are then aggregated into a distribution (see Figure, part B), which is compared against several benchmark distributions using the Jensen–Shannon divergence. The benchmarks represent **ideal**(all voters are fully satisfied with the outcome), **maximally dissatisfied**(all voters assign the winner the lowest possible rank), **neutral**(equal distribution across all dissatisfaction levels), and **polarized patterns**(concentrates mass at the extremes;fully satisfied and fully dissatisfied), reflecting theoretically meaningful extremes and transitional states of possible dissatisfaction distributions.
 </p> 
+<p align="justify">
 The ElecMeter Index combines the average voter dissatisfaction score with the most extreme divergence-based index through a generalized mean formulation (for details, see ElecMeter: An Index for Evaluating Electoral Social Dissatisfaction). This approach captures both the magnitude and the structural pattern of dissatisfaction within the electorate.
-
+</p>
+<p align="justify">
 Below, you can see the dissatisfaction index computed by ElecMeter for two populations corresponding to the distributions shown in the figure above. ElecMeter is bounded within the unit interval [0,1]. This boundedness enhances interpretability, as the values have a clear absolute meaning: 0 corresponds to complete satisfaction, and 1 corresponds to complete dissatisfaction.
+</p> 
+
 
 ### An Example of Calculating the Dissaisfaction of the results of voting using ElecMeter Index:
 Suppose there are two populations, each with a size of 10,000. In each population, an election is held separately to select a winner among five candidates. After the winner is chosen, the voters’ dissatisfaction distributions can be represented as follows:
@@ -50,9 +54,10 @@ The outputs are as follows:
                    Ideal_vs_pol                 Elecmeter_index 
                       0.6903106                       0.5772262
 ```
+<p align="justify">
 The results reveal that both populations have almost the same normalized average dissatisfaction (Avg_Dissatisfaction_norm ≈ 0.382). However, their ElecMeter index values differ: 0.709 for Population A and 0.577 for Population B. Therefore, according to the ElecMeter index, **the population A is more dissatisfied than population B**. This difference reflects structural variations in dissatisfaction beyond the average.
 According to the Jensen–Shannon divergence between the observed distributions and the benchmark distributions (js_observed_ideal), Population B is closer to the ideal distribution than Population A. Among the different dissatisfaction benchmarks, Population A is closest to the neutral distribution (js_observed_neutral = 0.0712), while Population B is closer to the polarized distribution (js_observed_polarized = 0.188).
-
+</p>
 
 ## Dissatisfaction Distribution Simulation
 
