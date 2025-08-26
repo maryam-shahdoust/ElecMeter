@@ -2,11 +2,6 @@
 ![Code Size](https://img.shields.io/github/languages/code-size/Maryam-Shahdoust/ElecMeter?color=yellow)
 [![GitHub Releases](https://img.shields.io/github/v/release/Maryam-Shahdoust/ElecMeter?display_name=tag)](https://github.com/Maryam-Shahdoust/ElecMeter/releases)
 
-
-
-
-
-
 # ElecMeter : an index for Evaluating an Election social Dissatisfaction
 
 </div>
@@ -20,7 +15,19 @@ Below, you can see the dissatisfaction index computed by ElecMeter for two popul
 Suppose there are two populations, each with a size of 10,000. In each population, an election is held separately to select a winner among five candidates. After the winner is chosen, the voters’ dissatisfaction distributions can be represented as follows:
 Population A: (3197, 1247, 3773, 646, 1137)
 Population B: (3728, 3268, 0, 8, 2996)
-The dissatisfaction index for these two populations is then calculated using the function ElecMeter_function().
+The dissatisfaction index for these two populations is then calculated using the function ElecMeter_function(). For these two populatrions the indexes of the function are:
+size of the populations : population_size = 10000, 
+observed_frequencies (for population A ) : observed_frequencies_A  = (3197, 1247, 3773, 646, 1137) 
+observed_frequencies (for population A ) : observed_frequencies_B  = (3728, 3268, 0, 8, 2996)
+number of candidates : number_candidates = 5 
+p = 3
+
+``` bash
+ElecMeter_ popA <- ElecMeter_index(population_size, observed_frequencies_A, number_candidates,p)
+ElecMeter_ popB <- ElecMeter_index(population_size, observed_frequencies_B, number_candidates,p)
+```
+
+
 
 
 
