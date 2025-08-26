@@ -21,7 +21,7 @@ The dissatisfaction index for these two populations is then calculated using the
 - observed_frequencies (for population A ) : observed_frequencies_A  = c(3197, 1247, 3773, 646, 1137) 
 - observed_frequencies (for population A ) : observed_frequencies_B  = c(3728, 3268, 0, 8, 2996)
 - number of candidates : number_candidates = 5 
-- p = 3
+- powe parameter of ElecMeter formula:   p = 3
 
 ``` bash
 ElecMeter.popA <- ElecMeter_index(population_size, observed_frequencies_A, number_candidates,p)
