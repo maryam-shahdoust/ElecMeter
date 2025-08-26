@@ -88,7 +88,7 @@ sim_results <- list(candidates,PP,freqs,info,Diss,dist)
 ```
 
 
-***🚀 Usage:***
+***🚀 Usage:*** This generates dissatisfaction distributions for: 5 candidates, across one populations with 1000 individuals.
 ``` bash
 results <- SimPopulation(number_candidates = 5,
                          groups = 1,
