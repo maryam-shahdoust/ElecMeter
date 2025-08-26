@@ -15,3 +15,22 @@ Imagine we have K candidates in an election (or ranking system). Every populatio
 Dissatisfaction of a candidate = distance of that candidate’s position from the top in a ranking (0 = first place, 1 = second place, …).
 
 By simulating multiple populations, we obtain the distribution of dissatisfaction levels under different possible outcomes.
+⚙️ Methodology
+
+The simulation follows these steps:
+
+Generate all possible rankings (permutations):
+
+For K candidates, there are K! permutations.
+
+Example: with K = 5, we get 120 permutations.
+
+Simulate ranking frequencies per population:
+
+Populations of size N are simulated using a multinomial distribution.
+
+The probability vector for the multinomial is drawn from a Dirichlet distribution.
+
+Randomize Dirichlet parameter (α):
+
+Each run uses a random α chosen from
