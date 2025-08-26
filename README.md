@@ -3,20 +3,15 @@
 # An Example of Calculating the Dissaisfaction of the results of voting using ElecMeter Index:
 Suppose there is population with size 10000. The vo
 
-## 🔄 Workflow
 
-```mermaid
-flowchart TD
-    A[Define K candidates] --> B[Generate all permutations (K! rankings)]
-    B --> C[Select α randomly from {0.05, 0.01, 0.25, 0.5, 1, 2, 3}]
-    C --> D[Sample probability vector from Dirichlet distribution]
-    D --> E[Simulate frequencies of permutations using Multinomial distribution]
-    E --> F[Compute dissatisfaction scores (rank position - 1)]
-    F --> G[Assign each candidate as winner]
-    G --> H[Aggregate dissatisfaction by population]
-    H --> I[Build dissatisfaction distribution per candidate]
+## Dissatisfaction Distribution Simulation
 
-When rendered on GitHub, it will look like a clean flowchart showing your simulation steps.  
+This repository provides R code to simulate dissatisfaction distributions in ranking/voting scenarios with multiple candidates. The main function SimPopulation() generates dissatisfaction profiles for simulated populations under probabilistic models.
 
+📖 Scenario
 
+Imagine we have K candidates in an election (or ranking system). Every population produces rankings of candidates. Since different voting methods may yield different winners, we want to compute the dissatisfaction distribution for all possible winners.
 
+Dissatisfaction of a candidate = distance of that candidate’s position from the top in a ranking (0 = first place, 1 = second place, …).
+
+By simulating multiple populations, we obtain the distribution of dissatisfaction levels under different possible outcomes.
