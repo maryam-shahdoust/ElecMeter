@@ -1,4 +1,15 @@
-# ElecMeter
+[![GitHub Issues](https://img.shields.io/github/issues/Maryam-Shahdoust/ElecMeter)](https://github.com/Maryam-Shahdoust/ElecMeter/issues) 
+![Code Size](https://img.shields.io/github/languages/code-size/Maryam-Shahdoust/ElecMeter?color=yellow)
+[![GitHub Releases](https://img.shields.io/github/v/release/Maryam-Shahdoust/ElecMeter?display_name=tag)](https://github.com/Maryam-Shahdoust/ElecMeter/releases)
+
+
+
+
+
+
+# ElecMeter : an index for Evaluating an Election social Dissatisfaction
+
+ElecMeter is an index for measuring voter dissatisfaction in single-winner elections. The core idea is to compute a dissatisfaction score for each voter based on the rank position of the winning candidate (See the above Figure, part A). These individual scores are then aggregated into a distribution (See the above Figure, part B), which is compared to several benchmark distributions using the Jensen--Shannon divergence\cite{menendez1997jensen}. These benchmarks represent ideal, maximally dissatisfied, neutral, and polarized pattern to represent theoretically meaningful extremes and transitional states within the space of possible dissatisfaction distributions
 
 # An Example of Calculating the Dissaisfaction of the results of voting using ElecMeter Index:
 Suppose there is population with size 10000. The vo
