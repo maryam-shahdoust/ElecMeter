@@ -13,23 +13,42 @@ Below, you can see the dissatisfaction index computed by ElecMeter for two popul
 
 ### An Example of Calculating the Dissaisfaction of the results of voting using ElecMeter Index:
 Suppose there are two populations, each with a size of 10,000. In each population, an election is held separately to select a winner among five candidates. After the winner is chosen, the voters’ dissatisfaction distributions can be represented as follows:
-Population A: (3197, 1247, 3773, 646, 1137)
-Population B: (3728, 3268, 0, 8, 2996)
+- Population A: (3197, 1247, 3773, 646, 1137)
+- Population B: (3728, 3268, 0, 8, 2996)
 The dissatisfaction index for these two populations is then calculated using the function ElecMeter_function(). For these two populatrions the indexes of the function are:
-size of the populations : population_size = 10000, 
-observed_frequencies (for population A ) : observed_frequencies_A  = (3197, 1247, 3773, 646, 1137) 
-observed_frequencies (for population A ) : observed_frequencies_B  = (3728, 3268, 0, 8, 2996)
-number of candidates : number_candidates = 5 
-p = 3
+- size of the populations : population_size = 10000 
+- observed_frequencies (for population A ) : observed_frequencies_A  = c(3197, 1247, 3773, 646, 1137) 
+- observed_frequencies (for population A ) : observed_frequencies_B  = c(3728, 3268, 0, 8, 2996)
+- number of candidates : number_candidates = 5 
+- p = 3
 
 ``` bash
-ElecMeter_ popA <- ElecMeter_index(population_size, observed_frequencies_A, number_candidates,p)
-ElecMeter_ popB <- ElecMeter_index(population_size, observed_frequencies_B, number_candidates,p)
+ElecMeter.popA <- ElecMeter_index(population_size, observed_frequencies_A, number_candidates,p)
+ElecMeter.popB <- ElecMeter_index(population_size, observed_frequencies_B, number_candidates,p)
 ```
-
-
-
-
+The outputs are as follows:
+``` bash
+> ElecMeter.popA
+            Avg_Dissatisfaction        Avg_Dissatisfaction_norm                         Entropy 
+                     1.52790000                      0.38197500                      2.04303333 
+              js_observed_ideal js_observed_max_dissatisfaction             js_observed_neutral 
+                     0.47293471                      0.73516626                      0.07123823 
+          js_observed_polarized                    Ideal_vs_Max                   Ideal_vs_Neut 
+                     0.39239372                      0.39146952                      0.86908898 
+                   Ideal_vs_pol                 Elecmeter_index 
+                     0.54653782                      0.70879003 
+> ElecMeter.popB 
+            Avg_Dissatisfaction        Avg_Dissatisfaction_norm                         Entropy 
+                      1.5276000                       0.3819000                       1.5871907 
+              js_observed_ideal js_observed_max_dissatisfaction             js_observed_neutral 
+                      0.4208865                       0.4938458                       0.2340600 
+          js_observed_polarized                    Ideal_vs_Max                   Ideal_vs_Neut 
+                      0.1888195                       0.4601199                       0.6426273 
+                   Ideal_vs_pol                 Elecmeter_index 
+                      0.6903106                       0.5772262
+```
+The results reveal that both populations have almost the same normalized average dissatisfaction (Avg_Dissatisfaction_norm ≈ 0.382). However, their ElecMeter index values differ: 0.709 for Population A and 0.577 for Population B. This difference reflects structural variations in dissatisfaction beyond the average.
+According to the Jensen–Shannon divergence between the observed distributions and the benchmark distributions (js_observed_ideal), Population B is closer to the ideal distribution than Population A. Among the different dissatisfaction benchmarks, Population A is closest to the neutral distribution (js_observed_neutral = 0.0712), while Population B is closer to the polarized distribution (js_observed_polarized = 0.188).
 
 
 ## Dissatisfaction Distribution Simulation
