@@ -12,7 +12,9 @@
 </div>
 <img src="schematic_fig3.drawio.png" style="width:80%;" align=center>
 
-ElecMeter is an index for measuring voter dissatisfaction in single-winner elections. The core idea is to compute a dissatisfaction score for each voter based on the rank position of the winning candidate (See the above Figure, part A). These individual scores are then aggregated into a distribution (See the above Figure, part B), which is compared to several benchmark distributions using the Jensen-Shannon divergence. These benchmarks represent ideal, maximally dissatisfied, neutral, and polarized pattern to represent theoretically meaningful extremes and transitional states within the space of possible dissatisfaction distributions
+ElecMeter is an index for measuring voter dissatisfaction in single-winner elections. The core idea is to assign each voter a dissatisfaction score based on the rank position of the winning candidate (see Figure, part A). These individual scores are then aggregated into a distribution (see Figure, part B), which is compared against several benchmark distributions using the Jensen–Shannon divergence. The benchmarks represent ideal, maximally dissatisfied, neutral, and polarized patterns, reflecting theoretically meaningful extremes and transitional states of possible dissatisfaction distributions.
+The ElecMeter Index combines the average voter dissatisfaction score with the most extreme divergence-based index through a generalized mean formulation (for details, see ElecMeter: An Index for Evaluating Electoral Social Dissatisfaction). This approach captures both the magnitude and the structural pattern of dissatisfaction within the electorate.
+Below, you can see the dissatisfaction index computed by ElecMeter for two populations corresponding to the distributions shown in the figure above.
 
 # An Example of Calculating the Dissaisfaction of the results of voting using ElecMeter Index:
 Suppose there is population with size 10000. The vo
