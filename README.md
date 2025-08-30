@@ -20,10 +20,10 @@ Below, you can see the dissatisfaction index computed by ElecMeter for two popul
 ## Table of Contents
 - [An Example of Calculating the Dissaisfaction of the results of voting using ElecMeter Index](#An-Example-of-Calculating-the-Dissaisfaction-of-the-results-of-voting-using-ElecMeter-Index)
 - [Dissatisfaction Distribution Simulation](#Dissatisfaction-Distribution-Simulation)
-   - Scenario(#Scenario)
-   - Methodology(#Methodology)
-   - Usage(#Usage)
-   - Outputs(Outputs)
+   - [Scenario](#Scenario)
+   - [Methodology](#Methodology)
+   - [Usage](#Usage)
+   - [Outputs](#Outputs)
 
 ### An Example of Calculating the Dissaisfaction of the results of voting using ElecMeter Index:
 Suppose there are two populations, each with a size of 10,000. In each population, an election is held separately to select a winner among five candidates. After the winner is chosen, the voters’ dissatisfaction distributions can be represented as follows:
