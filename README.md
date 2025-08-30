@@ -17,6 +17,13 @@ The ElecMeter Index combines the average voter dissatisfaction score with the mo
 Below, you can see the dissatisfaction index computed by ElecMeter for two populations corresponding to the distributions shown in the figure above. ElecMeter is bounded within the unit interval [0,1]. This boundedness enhances interpretability, as the values have a clear absolute meaning: 0 corresponds to complete satisfaction, and 1 corresponds to complete dissatisfaction.
 </p> 
 
+## Table of Contents
+- [An Example of Calculating the Dissaisfaction of the results of voting using ElecMeter Index](#An-Example-of-Calculating-the-Dissaisfaction-of-the-results-of-voting-using-ElecMeter-Index)
+- [Dissatisfaction Distribution Simulation](#Dissatisfaction-Distribution-Simulation)
+   - Scenario
+   - Methodology
+   - Usage
+   - Outputs
 
 ### An Example of Calculating the Dissaisfaction of the results of voting using ElecMeter Index:
 Suppose there are two populations, each with a size of 10,000. In each population, an election is held separately to select a winner among five candidates. After the winner is chosen, the voters’ dissatisfaction distributions can be represented as follows:
