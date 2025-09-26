@@ -157,13 +157,14 @@ results <- SimPopulation(number_candidates = 5,
                         population_size = 1000)
 ```
 The final dissatisfaction distributions are like this:
+```
     A   B   C   D   E
 0 185 181 199 210 225
 1 172 194 242 205 187
 2 204 184 181 216 215
 3 251 223 185 173 168
 4 188 218 193 196 205
-
+```
 
 ***📊 Outputs:***
 
